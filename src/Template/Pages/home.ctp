@@ -88,7 +88,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		<div class="clearfix">
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre01.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -103,7 +103,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			</div>
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre02.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -118,7 +118,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			</div>
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre03.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -133,7 +133,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			</div>
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre04.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -148,7 +148,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			</div>
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre05.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -163,7 +163,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 			</div>
 			<div class="searchGenreBox">
 				<div class="searchGenreBoxTop">
-					<img src="">
+					<img src="img/pic_genre06.jpg">
 					<div>
 						<p>ジャンル</p>
 						<p>ジャンル</p>
@@ -185,7 +185,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 		<input type="text">
 	
 	</div>
-	
+　　　　
 	<div class="searchContainer">
 		<h3>②エリアを指定する</h3>
 		<select>
