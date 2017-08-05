@@ -64,7 +64,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', 'c89e2a6a5ca73db94324a8651b90d0b27b5030d6bfa6e6d4e2fa0e4b0dfa7872'),
+        'salt' => env('SECURITY_SALT', 'c89e2a6a5ca73db94324a8651b90d0b27b5030d6bfa6e6d4e2fa0e4b0dfa78721'),
     ],
 
     /**
@@ -260,26 +260,26 @@ return [
             'url' => env('DATABASE_URL', null),
         ],
 
-        /**
-         * The test connection is used during the test suite.
-         */
-        'test' => [
-            'className' => 'Cake\Database\Connection',
-            'driver' => 'Cake\Database\Driver\Mysql',
-            'persistent' => false,
-            'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
-            'encoding' => 'utf8',
-            'timezone' => 'UTC',
-            'cacheMetadata' => true,
-            'quoteIdentifiers' => false,
-            'log' => false,
-            //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            'url' => env('DATABASE_TEST_URL', null),
-        ],
+        // /**
+        //  * The test connection is used during the test suite.
+        //  */
+        // 'test' => [
+        //     'className' => 'Cake\Database\Connection',
+        //     'driver' => 'Cake\Database\Driver\Mysql',
+        //     'persistent' => false,
+        //     'host' => 'localhost',
+        //     //'port' => 'non_standard_port_number',
+        //     'username' => 'my_app',
+        //     'password' => 'secret',
+        //     'database' => 'test_myapp',
+        //     'encoding' => 'utf8',
+        //     'timezone' => 'UTC',
+        //     'cacheMetadata' => true,
+        //     'quoteIdentifiers' => false,
+        //     'log' => false,
+        //     //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+        //     'url' => env('DATABASE_TEST_URL', null),
+        // ],
     ],
 
     /**

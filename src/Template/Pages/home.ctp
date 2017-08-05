@@ -53,6 +53,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 <div class="row">
     <div class="columns large-12">
+        <?= $this->Form->create('null', ['type' => 'post', 'url' => ['controller' => 'users', 'action' => 'logout']]);?>
+        <?= $this->Form->submit('ログアウト');?>
+        <?= $this->Form->end();?>
         <div class="ctp-warning alert text-center">
             <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.</p>
         </div>
