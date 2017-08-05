@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+a{
+text-decoration:none;
+color:#000;
+}
+h1{
+	font-size:small;
+}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+#header{
+	width:1200px;
+	margin:auto;
+}
+#headerLeft{
+	float:left
+}
+#headerLogo{
+	width:100px;
+	margin:5px 20px;
+}
+#headerRight{
+	float:right;
+}
+#headerRight li{
+	display:inline-block;
+	margin:10px;
+}
+#headerRight .textbox{
+	width:150px;
+}
+#headerRight .button{
+	width:70px;
+	margin:0 10px;
+}
+#headerRight span{
+	font-weight:bold;
+	font-size:x-large;
+}
+
+#gMenu{
+	background:url(../img/img_menu01.gif);
+	background-repeat:repeat-x;
+	margin:10px auto;
+	padding:9px 0;
+	width:1200px;
+	min-width:1200px;
+}
+#gMenu ul{
+	width:800px;
+	height:26px;
+	margin:auto;
+	border-right:solid 1px #fff;
+}
+#gMenu li{
+	float:left;
+	width:158px;
+	height:26px;
+	border-left:solid 1px #fff;
+	text-align:center;
+}
+#gMenu a{
+	display:block;
+	color:#fff;
+	height:44px;
+}
+#contentWrapper{
+	width:1200px;
+	margin:auto;
+}
+#searchTop h2{
+	text-align:center;
+	font-size:x-large;
+}
+#searchTopMain{
+	position:relative;
+	background:#e2f3ff;
+	width:1200px;
+	height:350px;
+}
+#searchTopMain div{
+	position:absolute;
+}
+#searchTopMain img{
+	height:170px;
+	width:170px;
+	border-radius:50%;
+}
+#searchTopMain #item1{
+	top:100px;
+	left:350px;
+}
+#searchTopMain #item2{
+	top:100px;
+	right:350px;
+}
+#searchTopMain div p{
+	display:block;
+	height:50px;
+	width:150px;
+	font-size:large;
+	text-align:center;
+	position:absolute;
+	margin:auto;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.searchContainer{
+	margin:20px 0;
+	padding-left:7px;
+	border-left:solid 15px #60a0e8;
+}
+.searchContainer h3{
+	margin:10px 0;
+	padding-left:7px;
+	border-left:solid 7px #b0ddff;
+	font-size:large;
+}
+.searchGenreBox{
+	position:relative;
+	float:left;
+	margin:10px;
+	height:250px;
+	width:370px;
+	background:#b0ddff;
+}
+.searchGenreBoxTop img{
+	position:absolute;
+	top:5px;
+	left:5px;
+	height:180px;
+	width:180px;
+	background:#fff;
+}
+.searchGenreBoxTop div{
+	position:absolute;
+	top:5px;
+	left:190px;
+	height:180px;
+	width:180px;
+}
+.searchGenreBoxTop div p{
+	text-align:center;
+	height:35px;
+}
+.searchGenreBoxBottom{
+	position:absolute;
+	top:190px;
+	left:0px;
+	padding-top:20px;
+	height:40px;
+	width:370px;
+	background:#60a0e8;
+}
+.searchGenreBoxBottom p{
+	text-align:center;
+	font-size:large;
+}
+
+.searchBigLabel{
+	font-size:large;
+	text-align:center;
+	margin:10px;
+}
+
+#searchButtonArea{
+	width:200px;
+	height:40px;
+	background:#b0ddff;
+	padding:30px 500px;
+}
+#searchButtonArea input{
+	display:block;
+	width:200px;
+	height:40px;
+}
