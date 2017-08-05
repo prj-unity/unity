@@ -47,162 +47,166 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <body class="home">
 
 <div id="header" class="clearfix">
-	<div id="headerLeft">
-		<h1>お仕事マッチングサイト｜Unity</h1>
-		<img id="headerLogo" src="img/img_logo01.png">
-	</div>
-	<div id="headerRight">
-		<ul>
-			<li><a href="#">マイページ</a></li>
-			<li><a href="#">Unityについて</a></li>
-		</ul>
-		<form id="headerSearch">
-			<input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit">
-		</form>
-	</div>
+    <div id="headerLeft">
+        <h1>お仕事マッチングサイト｜Unity</h1>
+        <img id="headerLogo" src="img/img_logo01.png">
+    </div>
+    <div id="headerRight">
+        <ul>
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">Unityについて</a></li>
+            <li>
+                <?= $this->Form->create('name', ['name' => 'form', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'logout']]);?>
+                <a href="#" onclick="document.form.submit()">ログアウト</a>
+                <?= $this->Form->end();?>
+            </li>
+        </ul>
+        <form id="headerSearch">
+            <input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit">
+        </form>
+    </div>
 </div><!-- END header -->
 <div id="gMenu">
-	<ul>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-	</ul>
+    <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+    </ul>
 </div>
 <div id="contentWrapper">
-	<div id="searchTop">
-		<h2>あなたの「やりたい」がきっと見つかる</h2>
-		<div id="searchTopMain">
-			<div id="item1">
-				<a href="#"><img src="img/btn_top01.png"></a>
-			</div>
-			<div id="item2">
-				<a href="#"><img src="img/btn_top02.png"></a>
-			</div>
-		</div>
-	</div>
-	
-	<div class="searchContainer">
-		<h3>①ジャンルから探す</h3>
-		<div class="clearfix">
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre01.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre02.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre03.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre04.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre05.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-			<div class="searchGenreBox">
-				<div class="searchGenreBoxTop">
-					<img src="img/pic_genre06.jpg">
-					<div>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-						<p>ジャンル</p>
-					</div>
-				</div>
-				<div class="searchGenreBoxBottom">
-					<p>大分類名</p>
-				</div>
-			</div>
-		</div>
-		
-		
-		<p class="searchBigLabel">または</p>
-	
-		<h3>①フリーワードで探す</h3>
-		<input type="text">
-	
-	</div>
-　　　　
-	<div class="searchContainer">
-		<h3>②エリアを指定する</h3>
-		<select>
-			<option>地域</option>
-		</select>
-		<select>
-			<option>都道府県</option>
-		</select>
-		<select>
-			<option>市区町村</option>
-		</select>
-	</div>
-	
-	<div id="searchButtonArea">
-		<input type="submit">
-	</div>
-	
+    <div id="searchTop">
+        <h2>あなたの「やりたい」がきっと見つかる</h2>
+        <div id="searchTopMain">
+            <div id="item1">
+                <a href="#"><img src="img/btn_top01.png"></a>
+            </div>
+            <div id="item2">
+                <a href="#"><img src="img/btn_top02.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="searchContainer">
+        <h3>①ジャンルから探す</h3>
+        <div class="clearfix">
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre01.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre02.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre03.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre04.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre05.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+            <div class="searchGenreBox">
+                <div class="searchGenreBoxTop">
+                    <img src="img/pic_genre06.jpg">
+                    <div>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                        <p>ジャンル</p>
+                    </div>
+                </div>
+                <div class="searchGenreBoxBottom">
+                    <p>大分類名</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="searchBigLabel">または</p>
+
+        <h3>①フリーワードで探す</h3>
+        <input type="text">
+
+    </div>
+
+    <div class="searchContainer">
+        <h3>②エリアを指定する</h3>
+        <select>
+            <option>地域</option>
+        </select>
+        <select>
+            <option>都道府県</option>
+        </select>
+        <select>
+            <option>市区町村</option>
+        </select>
+    </div>
+
+    <div id="searchButtonArea">
+        <input type="submit">
+    </div>
+
 </div>
 
 </body>
