@@ -9,3 +9,8 @@
 <?= $this->Form->input('password') ?>
 <?= $this->Form->button('ログイン') ?>
 <?= $this->Form->end() ?>
+<div>
+username: user<br>
+password: password<br>
+こちらでログインしてください
+</div>

@@ -11,17 +11,6 @@ use Cake\Event\Event;
  */
 class UsersController extends AppController
 {
-    // /**
-    //  * beforeFilter
-    //  * @param  Event  $event イベントオブジェクト
-    //  * @return void
-    //  */
-    // public function beforeFilter(Event $event)
-    // {
-    //     parent::beforeFilter($event);
-    //     $this->Auth->allow(['add', 'activate']);
-    // }
-
     /**
      * Index method
      *
@@ -133,16 +122,6 @@ class UsersController extends AppController
             }
             $this->Flash->error('ユーザー名またはパスワードが違います。');
         }
-        // if ($this->Auth->loggedIn()){
-        //     $this->redirect($this->Auth->redirect());
-        // } else if ($this->request->is('post')) {
-        //     if ($this->Auth->login()) {
-        //         $this->saveLoginInfo();
-        //         $this->redirect($this->Auth->redirect());
-        //     } else {
-        //         $this->Session->setFlash('ユーザID、またはパスワードが違います。', 'default', array('class' => 'flash_failure'));
-        //     }
-        // }
     }
 
 
