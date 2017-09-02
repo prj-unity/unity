@@ -22,6 +22,7 @@ class UsersController extends AppController
 
         $this->set(compact('users'));
         $this->set('_serialize', ['users']);
+        $this->viewBuilder()->layout('cake');
     }
 
     /**
@@ -39,6 +40,7 @@ class UsersController extends AppController
 
         $this->set('user', $user);
         $this->set('_serialize', ['user']);
+        $this->viewBuilder()->layout('cake');
     }
 
     /**
@@ -60,6 +62,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
+        $this->viewBuilder()->layout('cake');
     }
 
     /**
@@ -85,6 +88,7 @@ class UsersController extends AppController
         }
         $this->set(compact('user'));
         $this->set('_serialize', ['user']);
+        $this->viewBuilder()->layout('cake');
     }
 
     /**
@@ -108,6 +112,15 @@ class UsersController extends AppController
     }
 
     /**
+     * 検索結果表示
+     */
+    public function search()
+    {
+        $search = '検索画面を作成します';
+        $this->set(compact('search'));
+    }
+
+    /**
      * Login method
      *
      * @return \Cake\Network\Response|null
@@ -122,6 +135,7 @@ class UsersController extends AppController
             }
             $this->Flash->error('ユーザー名またはパスワードが違います。');
         }
+        $this->viewBuilder()->layout('cake');
     }
 
 

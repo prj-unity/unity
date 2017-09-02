@@ -19,39 +19,53 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <html>
 <head>
     <?= $this->Html->charset() ?>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        UNITY
     </title>
+
     <?= $this->Html->meta('icon') ?>
-
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
+    <?= $this->Html->css('reset.css') ?>
+    <?= $this->Html->css('common.css') ?>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
 </head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+<body class="home">
+
+<div id="header" class="clearfix">
+    <div id="headerLeft">
+        <h1>お仕事マッチングサイト｜Unity</h1>
+        <img id="headerLogo" src="<?=$this->Url->build('/');?>img/img_logo01.png">
+    </div>
+    <div id="headerRight">
+        <ul>
+            <li><a href="#">マイページ</a></li>
+            <li><a href="#">Unityについて</a></li>
+            <li>
+                <?= $this->Form->create('name', ['name' => 'form', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'logout']]);?>
+                <a href="#" onclick="document.form.submit()">ログアウト</a>
+                <?= $this->Form->end();?>
             </li>
         </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+        <form id="headerSearch">
+            <input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit">
+        </form>
     </div>
-    <footer>
-    </footer>
+</div><!-- END header -->
+<div id="gMenu">
+    <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+    </ul>
+</div>
+<div id="contentWrapper">
+    <?= $this->fetch('content') ?>
+</div>
+
 </body>
 </html>
