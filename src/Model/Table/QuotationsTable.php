@@ -23,7 +23,7 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class QuotationsTable extends Table
+class QuotationsTable extends AppTable
 {
 
     /**

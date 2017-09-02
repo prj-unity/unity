@@ -24,7 +24,7 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class UserMessagesTable extends Table
+class UserMessagesTable extends AppTable
 {
 
     /**

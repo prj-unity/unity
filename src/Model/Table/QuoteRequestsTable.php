@@ -25,7 +25,7 @@ use Cake\Validation\Validator;
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class QuoteRequestsTable extends Table
+class QuoteRequestsTable extends AppTable
 {
 
     /**
