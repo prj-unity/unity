@@ -12,7 +12,7 @@ use SoftDelete\Model\Table\SoftDeleteTrait;
  */
 class AppTable extends Table
 {
-    // use SoftDeleteTrait;
+    use SoftDeleteTrait;
 
     protected $softDeleteField = 'deleted';
 
