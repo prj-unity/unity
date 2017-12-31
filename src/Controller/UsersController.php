@@ -18,11 +18,11 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $users = $this->paginate($this->Users);
+        // $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
         $this->set('_serialize', ['users']);
-        $this->viewBuilder()->layout('cake');
+        // $this->viewBuilder()->layout('cake');
     }
 
     /**
@@ -118,6 +118,9 @@ class UsersController extends AppController
     {
         $search = '検索画面を作成します';
         $this->set(compact('search'));
+        if ($this->request->is('post')) {
+            var_dump($this->request->data);exit;
+        }
     }
 
     /**

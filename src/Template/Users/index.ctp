@@ -3,52 +3,136 @@
   * @var \App\View\AppView $this
   */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="users index large-9 medium-8 columns content">
-    <h3><?= __('Users') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('username') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('password') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('rank') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= $this->Number->format($user->id) ?></td>
-                <td><?= h($user->username) ?></td>
-                <td><?= h($user->password) ?></td>
-                <td><?= $this->Number->format($user->rank) ?></td>
-                <td><?= h($user->created) ?></td>
-                <td><?= h($user->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+<div id="searchTop">
+    <h2>あなたの「やりたい」がきっと見つかる</h2>
+    <div id="searchTopMain">
+        <div id="item1">
+            <a href="#"><img src="img/btn_top01.png"></a>
+        </div>
+        <div id="item2">
+            <a href="#"><img src="img/btn_top02.png"></a>
+        </div>
     </div>
+</div>
+
+<div class="searchContainer">
+    <h3>①ジャンルから探す</h3>
+    <div class="clearfix">
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre01.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre02.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre03.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre04.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre05.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+        <div class="searchGenreBox">
+            <div class="searchGenreBoxTop">
+                <img src="img/pic_genre06.jpg">
+                <div>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                    <p>ジャンル</p>
+                </div>
+            </div>
+            <div class="searchGenreBoxBottom">
+                <p>大分類名</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="searchBigLabel">または</p>
+
+    <h3>①フリーワードで探す</h3>
+    <input type="text">
+
+</div>
+
+<div class="searchContainer">
+    <h3>②エリアを指定する</h3>
+    <select>
+        <option>地域</option>
+    </select>
+    <select>
+        <option>都道府県</option>
+    </select>
+    <select>
+        <option>市区町村</option>
+    </select>
+</div>
+
+<div id="searchButtonArea">
+    <?= $this->Form->create('name', ['name' => 'search', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'search']]);?>
+    <input type="submit">
+    <input type="hidden" name="test" value="testtest">
+    <?= $this->Form->end();?>
 </div>
