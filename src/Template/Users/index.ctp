@@ -117,22 +117,30 @@
 
 </div>
 
+<?= $this->Form->create('name', ['name' => 'search', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'search']]);?>
 <div class="searchContainer">
     <h3>②エリアを指定する</h3>
-    <select>
-        <option>地域</option>
+    <select name="region">
+        <option value="">地域</option>
+<?php foreach ($datas['region'] as $data): ?>
+    <option value="<?=$data;?>"><?=$data;?></option>
+<?php endforeach; ?>
     </select>
-    <select>
-        <option>都道府県</option>
+    <select name="pref">
+        <option value="">都道府県</option>
+<?php foreach ($datas['pref'] as $data): ?>
+    <option value="<?=$data;?>"><?=$data;?></option>
+<?php endforeach; ?>
     </select>
-    <select>
-        <option>市区町村</option>
+    <select name="addr_1">
+        <option value="">市区町村</option>
+<?php foreach ($datas['addr_1'] as $data): ?>
+    <option value="<?=$data;?>"><?=$data;?></option>
+<?php endforeach; ?>
     </select>
 </div>
 
 <div id="searchButtonArea">
-    <?= $this->Form->create('name', ['name' => 'search', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'search']]);?>
     <input type="submit">
-    <input type="hidden" name="test" value="testtest">
-    <?= $this->Form->end();?>
 </div>
+<?= $this->Form->end();?>

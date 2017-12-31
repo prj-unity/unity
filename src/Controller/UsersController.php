@@ -18,11 +18,27 @@ class UsersController extends AppController
      */
     public function index()
     {
-        // $users = $this->paginate($this->Users);
+        $userDatas = $this->Users->find()
+            ->select(['pref', 'addr_1', 'addr_2', 'region'])
+            ->all()
+            ->toArray();
 
-        $this->set(compact('users'));
-        $this->set('_serialize', ['users']);
-        // $this->viewBuilder()->layout('cake');
+        $datas = [
+            'pref'   => [],
+            'addr_1' => [],
+            'addr_2' => [],
+            'region' => [],
+        ];
+
+        foreach ($userDatas as $key => $data) {
+            foreach ($datas as $k => $v) {
+                if ($data[$k] && !in_array($data[$k], $datas[$k])) {
+                    $datas[$k][] = $data[$k];
+                }
+            }
+        }
+
+        $this->set(compact('datas'));
     }
 
     /**
@@ -118,9 +134,19 @@ class UsersController extends AppController
     {
         $search = '検索画面を作成します';
         $this->set(compact('search'));
+        $users = [];
         if ($this->request->is('post')) {
-            var_dump($this->request->data);exit;
+            $datas = $this->request->data;
+
+            $conditions = [];
+            foreach ($datas as $key => $data) if ($data != '') $conditions[$key] = $data;
+
+            $users = $this->Users->find()
+                ->where($conditions)
+                ->all()
+                ->toArray();
         }
+        $this->set(compact('users'));
     }
 
     /**
