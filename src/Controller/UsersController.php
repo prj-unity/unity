@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Event\Event;
+use Cake\Network\Exception\NotFoundException;
 
 /**
  * Users Controller
@@ -147,6 +148,19 @@ class UsersController extends AppController
                 ->toArray();
         }
         $this->set(compact('users'));
+    }
+
+    /**
+     * 詳細画面表示
+     */
+    public function detail($id)
+    {
+        $data = $this->Users->find()
+            ->where(['id' => $id])
+            ->all()
+            ->toArray();
+        if (!$data) throw new NotFoundException();
+        echo '<pre>';var_dump($data);exit;
     }
 
     /**
