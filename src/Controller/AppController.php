@@ -48,8 +48,8 @@ class AppController extends Controller
             'authenticate' => [
                 'Form' => ['fields' => ['username' => 'username', 'password' => 'password']]
             ],
-            'loginAction' => ['controller' => 'Users', 'action' => 'login'],
-            'logoutRedirect' => ['controller' => 'Users', 'action' => 'login'],
+            'loginAction' => ['controller' => 'Providers', 'action' => 'login'],
+            'logoutRedirect' => ['controller' => 'Providers', 'action' => 'login'],
             'redirect' => ['controller' => '/', 'action' => '/']
         ]);
 
