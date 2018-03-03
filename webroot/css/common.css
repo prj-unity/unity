@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 a{
-text-decoration:none;
-color:#000;
+	text-decoration:none;
+	color:#000;
 }
 h1{
 	font-size:small;
@@ -181,4 +181,241 @@ h1{
 	display:block;
 	width:200px;
 	height:40px;
+}
+.noBorder{
+	border:none!important;
+}
+
+#pankuzu{
+	margin:3px 20px 10px;
+}
+#pankuzu a{
+	color:#4488ff;
+}
+#resultWrapper h2{
+	display:inline-block;
+	margin:15px 0;
+	padding-left:10px;
+	border-left:solid 7px #b0ddff;
+	font-size:x-large;
+}
+#resultWrapper h3{
+	margin:15px 10px;
+	padding-left:10px;
+	border-left:solid 7px #b0ddff;
+	font-size:large;
+}
+#resultLabel{
+	display:inline-block;
+	margin:0 10px;
+}
+#resultRefineContainer{
+	background:#e2f3ff;
+	padding:20px;
+}
+#refineTitle{
+	padding-bottom:10px;
+	font-size:x-large;
+	border-bottom:solid 1px #000;
+}
+.refineBox{
+	display:inline-block;
+	width:500px;
+	padding-left:40px;
+}
+.refineLine{
+	margin-bottom:20px;
+}
+.refineLine span{
+	margin-right:10px;
+}
+#refineButton{
+	border:solid 2px #70b0f0;
+	border-top:solid 2px #f0f9ff;
+
+	border-radius: 0 0 20px 20px / 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px / 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px / 0 0 20px 20px;
+
+	background: linear-gradient(to bottom, #b0ddff, #e2f3ff);
+}
+#refineButton p{
+	text-align:center;
+}
+#resultButtonArea{
+	position:relative;
+	padding:30px;
+	padding-bottom:3px;
+	border-bottom:solid 1px #70b0f0;
+}
+#resultButtonArea p{
+	display:inline-block;
+	text-align:right;
+	width:440px;
+	padding-right:10px;
+}
+#contactsButton{
+	width:240px;
+	height:40px;
+}
+#selectAllButton{
+	position:absolute;
+	right:50px;
+	font-size:small;
+}
+.resultBox{
+	border-bottom:solid 1px #70b0f0;
+	width:100%;
+	padding:30px 0;
+}
+.resultBox div{
+	float:left;
+}
+.resultBoxCenter{
+	width:550px;
+	padding:0 30px;
+}
+.resultBoxCenter p{
+	margin:15px 0;
+	line-height:normal;
+}
+.resultBoxCenter .cPhrase{
+	font-size:1.5em;
+}
+.resultBoxCenter .cpName{
+	font-size:2.5em;
+}
+
+.resultBoxRight{
+	width:350px;
+	text-align:center;
+}
+.resultBox img{
+	margin:auto;
+	width:200px;
+	height:200px;
+}
+.resultBoxRight input{
+	width:330px;
+	height:60px;
+	margin-bottom:30px;
+}
+
+.noBorder{
+	border:none!important;
+}
+
+#pankuzu{
+	margin:3px 20px 10px;
+}
+#pankuzu a{
+	color:#4488ff;
+}
+#resultWrapper h2{
+	display:inline-block;
+	margin:15px 0;
+	padding-left:10px;
+	border-left:solid 7px #b0ddff;
+	font-size:x-large;
+}
+#resultWrapper h3{
+	margin:15px 10px;
+	padding-left:10px;
+	border-left:solid 7px #b0ddff;
+	font-size:large;
+}
+#resultLabel{
+	display:inline-block;
+	margin:0 10px;
+}
+#resultRefineContainer{
+	background:#e2f3ff;
+	padding:20px;
+}
+#refineTitle{
+	padding-bottom:10px;
+	font-size:x-large;
+	border-bottom:solid 1px #000;
+}
+.refineBox{
+	display:inline-block;
+	width:500px;
+	padding-left:40px;
+}
+.refineLine{
+	margin-bottom:20px;
+}
+.refineLine span{
+	margin-right:10px;
+}
+#refineButton{
+	border:solid 2px #70b0f0;
+	border-top:solid 2px #f0f9ff;
+
+	border-radius: 0 0 20px 20px / 0 0 20px 20px;
+	-webkit-border-radius: 0 0 20px 20px / 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px / 0 0 20px 20px;
+
+	background: linear-gradient(to bottom, #b0ddff, #e2f3ff);
+}
+#refineButton p{
+	text-align:center;
+}
+#resultButtonArea{
+	position:relative;
+	padding:30px;
+	padding-bottom:3px;
+	border-bottom:solid 1px #70b0f0;
+}
+#resultButtonArea p{
+	display:inline-block;
+	text-align:right;
+	width:440px;
+	padding-right:10px;
+}
+#contactsButton{
+	width:240px;
+	height:40px;
+}
+#selectAllButton{
+	position:absolute;
+	right:50px;
+	font-size:small;
+}
+.resultBox{
+	border-bottom:solid 1px #70b0f0;
+	width:100%;
+	padding:30px 0;
+}
+.resultBox div{
+	float:left;
+}
+.resultBoxCenter{
+	width:550px;
+	padding:0 30px;
+}
+.resultBoxCenter p{
+	margin:15px 0;
+	line-height:normal;
+}
+.resultBoxCenter .cPhrase{
+	font-size:1.5em;
+}
+.resultBoxCenter .cpName{
+	font-size:2.5em;
+}
+
+.resultBoxRight{
+	width:350px;
+	text-align:center;
+}
+.resultBox img{
+	margin:auto;
+	width:200px;
+	height:200px;
+}
+.resultBoxRight input{
+	width:330px;
+	height:60px;
+	margin-bottom:30px;
 }
