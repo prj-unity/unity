@@ -149,12 +149,12 @@ class ProvidersController extends AppController
 	 */
 	public function detail($id)
 	{
-		$data = $this->Providers->find()
+		$provider = $this->Providers->find()
 			->where(['id' => $id])
 			->all()
 			->toArray();
-		if (!$data) throw new NotFoundException();
-		echo '<pre>';var_dump($data);exit;
+		if (!isset($provider[0])) throw new NotFoundException();
+		$this->set(array('provider' => $provider[0]));
 	}
 
 	/**

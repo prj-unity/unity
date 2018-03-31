@@ -4,7 +4,7 @@ a{
 text-decoration:none;
 color:#000;
 }
-h1{
+#headerLeft h1{
 	font-size:small;
 }
 
@@ -14,7 +14,7 @@ h1{
 	clear:both;
 }
 .button{
-    border:none;
+	border:none;
 }
 
 #header{
@@ -55,6 +55,7 @@ h1{
 	background-repeat:repeat-x;
 	margin:10px auto;
 	padding:9px 0;
+	height:26px;
 	width:1200px;
 	min-width:1200px;
 }
@@ -91,7 +92,7 @@ h1{
 	height: 350px;
 }
 #footer {
-	height: 300px;
+	height: 200px;
 	background-color: #206EBE;
 	width: 1200px;
 	margin-left: auto;
@@ -152,7 +153,6 @@ h1{
 	height: 250px;
 	width: 370px;
 	background-color: #E2F3FF;
-	background-image: url(/img/boxgoole.jpg);
 }
 .searchGenreBoxTop img{
 	position:absolute;
@@ -218,6 +218,7 @@ h1{
 }
 #keywordserch input{
 	border: none;
+	width:200px;
 }
 #keywordserch input:focus{
 	border:none;
@@ -226,6 +227,33 @@ h1{
 .noBorder{
 	border:none!important;
 }
+
+/* ++++++++++++++++++ log in ++++++++++++++++++++ */
+#loginWrapper{
+	width:500px;
+	margin:50px auto;
+	text-align:center;
+	background-color:#e2f3ff;
+}
+#loginWrapper div{
+	
+}
+#loginWrapper img{
+	margin:30px;
+	
+}
+#loginWrapper input{
+	margin:30px;
+	width:300px;
+	height:40px;
+	font-size:large;
+}
+#loginWrapper input.loginButton{
+	width:200px;
+}
+
+
+/* ++++++++++++++++++ result ++++++++++++++++++++ */
 
 #pankuzu{
 	margin:3px 20px 10px;
@@ -273,11 +301,11 @@ h1{
 #refineButton{
 	border:solid 2px #70b0f0;
 	border-top:solid 2px #f0f9ff;
-
+	
 	border-radius: 0 0 20px 20px / 0 0 20px 20px;
 	-webkit-border-radius: 0 0 20px 20px / 0 0 20px 20px;
 	-moz-border-radius: 0 0 20px 20px / 0 0 20px 20px;
-
+	
 	background: linear-gradient(to bottom, #b0ddff, #e2f3ff);
 }
 #refineButton p{
@@ -340,4 +368,129 @@ h1{
 	width:330px;
 	height:60px;
 	margin-bottom:30px;
+}
+
+/* ++++++++++++++++++ company profile ++++++++++++++++++++ */
+
+.companyContainer h2{
+	margin:20px 0;
+	padding:7px 15px;
+	border-left:solid 15px #60a0e8;
+	font-size:x-large;
+
+}
+.companyBox{
+	padding:0;
+	margin:20px 0;
+
+}
+.companyContainer{
+	margin:20px 0;
+	
+}
+.companyContainer .companyText{
+	float:left;
+	width:780px;
+}
+.companyContainer .companyImage{
+	float:right;
+	width:400px;
+	height:200px;
+}
+.companyStrongContainer{
+	float:left;
+	width:600px;
+}
+.companyStrongContainer div{
+	height:30px;
+	padding-left:35px;
+	background-repeat:no-repeat;
+}
+.companyStrongContainer h3{
+	font-size:1.2em;
+	height:1.2em;
+}
+.companyStrongContainer .n1{
+	background-image:url("../img/unitynumber01.png");
+}
+.companyStrongContainer .n2{
+	background-image:url("../img/unitynumber02.png");
+}
+.companyStrongContainer .n3{
+	background-image:url("../img/unitynumber03.png");
+}
+.companyStrongContainer .n4{
+	background-image:url("../img/unitynumber04.png");
+}
+.companyButtonArea{
+	margin:30px 0;
+	text-align:center;
+}
+.companyButtonArea input{
+	margin:0 50px;
+	height:60px;
+	width:330px;
+}
+.companyContainer table,.companyContainer th,.companyContainer td{
+	border:1px #000 solid;
+}
+.companyContainer table{
+	width:100%;
+}
+.companyContainer th{
+	width:20%;
+	text-align:left;
+	font-size:large;
+	background-color:#ccc;
+}
+.companyContainer td{
+	width:70%;
+	text-align:left;
+}
+
+/* ++++++++++++++++++ new request ++++++++++++++++++++ */
+#newrequestWrapper{
+	margin-bottom:15px;
+	
+	
+}
+#newrequestWrapper div{
+	margin-left:30px;
+	
+}
+#newrequestWrapper h2{
+	font-size:xx-large;
+	
+}
+#newrequestWrapper h3{
+	margin:20px 0;
+	padding:7px 15px;
+	border-left:solid 15px #60a0e8;
+	font-size:x-large;
+}#newrequestWrapper #selectCompany div{
+	position:relative;
+	margin:0;
+	padding:5px 10px;
+	width:100%;
+	border:solid 1px #000;
+	
+}
+#newrequestWrapper #selectCompany img{
+	position:absolute;
+	display:block;
+	top:10px;
+	right:20px;
+}
+#newrequestWrapper #selectCompany input{
+	display:block;
+	margin:10px 30px 20px auto;
+	
+	width:150px;
+}
+#newrequestWrapper input,#newrequestWrapper textarea{
+	width:100%;
+}
+
+#replyDateArea input{
+	width:150px;
 }
