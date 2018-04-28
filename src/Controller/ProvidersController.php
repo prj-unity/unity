@@ -141,7 +141,8 @@ class ProvidersController extends AppController
 			->where($conditions)
 			->all()
 			->toArray();
-		$this->set(compact('providers'));
+		$searchCond = $this->request->data;
+		$this->set(compact('providers', 'searchCond'));
 	}
 
 	/**
@@ -154,7 +155,7 @@ class ProvidersController extends AppController
 			->all()
 			->toArray();
 		if (!isset($provider[0])) throw new NotFoundException();
-		$this->set(array('provider' => $provider[0]));
+		$this->set(array('provider' => $provider[0], 'searchCond' => $this->request->data));
 	}
 
 	/**

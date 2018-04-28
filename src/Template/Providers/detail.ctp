@@ -19,7 +19,9 @@
 		</div>
 		<div class="resultBoxRight">
 			<input type="button" value="問い合わせる">
-			<input type="button" value="選択して検索結果に戻る">
+			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'search']);?>" class="post_link">
+				<input type="button" value="選択して検索結果に戻る">
+			</a>
 		</div>
 	</div>
 	<div class="companyContainer clearfix">
@@ -30,34 +32,44 @@
 	<div class="companyContainer clearfix">
 		<h2>弊社の強み</h2>
 		<div class="clearfix">
+<?php if ($provider['profile1']): ?>
 			<div class="companyStrongContainer">
 				<div class="n1"><h3>キャッチフレーズ１</h3></div>
-				<p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+				<p><?= nl2br(h($provider['profile1']));?></p>
 			</div>
+<?php endif; ?>
+<?php if ($provider['profile2']): ?>
 			<div class="companyStrongContainer">
 				<div class="n2"><h3>キャッチフレーズ２</h3></div>
-				<p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+				<p><?= nl2br(h($provider['profile2']));?></p>
 			</div>
+<?php endif; ?>
 		</div>
 		<div class="clearfix">
+<?php if ($provider['profile3']): ?>
 			<div class="companyStrongContainer">
 				<div class="n3"><h3>キャッチフレーズ３</h3></div>
-				<p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+				<p><?= nl2br(h($provider['profile3']));?></p>
 			</div>
+<?php endif; ?>
+<?php if ($provider['profile4']): ?>
 			<div class="companyStrongContainer">
 				<div class="n4"><h3>キャッチフレーズ４</h3></div>
-				<p>TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT</p>
+				<p><?= nl2br(h($provider['profile4']));?></p>
 			</div>
+<?php endif; ?>
 		</div>
 	</div>
 	<div class="companyContainer clearfix">
 		<h2>事例紹介</h2>
-		<p class="companyText">TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT </p>
+		<p class="companyText"><?= nl2br(h($provider['example']));?></p>
 		<img src="/image/" class="companyImage">
 	</div>
 	<div class="companyButtonArea">
-		<input type="button" value="問い合わせる">
-		<input type="button" value="選択して検索結果に戻る">
+		<input type="button" class="" value="問い合わせる">
+		<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'search']);?>" class="post_link">
+			<input type="button" value="選択して検索結果に戻る">
+		</a>
 	</div>
 	<div class="companyContainer clearfix">
 		<h2>基本情報</h2>
@@ -88,3 +100,4 @@
 			</tr>
 		</table>
 	</div>
+	<input type="hidden" name="search_cond" value='<?= json_encode($searchCond, true);?>'>

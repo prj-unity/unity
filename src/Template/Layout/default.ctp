@@ -32,6 +32,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?= $this->Html->css('common.css') ?>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
+	<?= $this->Html->script('jquery-1.12.4.min.js') ?>
+	<?= $this->Html->script('common.js') ?>
 </head>
 <body class="home">
 

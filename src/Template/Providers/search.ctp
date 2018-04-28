@@ -126,7 +126,7 @@
 				<p>商圏エリア: <span><?=$provider['region'];?></span></p>
 			</div>
 			<div class="resultBoxRight">
-				<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'detail', $provider['id']]);?>"><input type="button" value="詳しく見る"></a>
+				<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'detail', $provider['id']]);?>" class="post_link"><input type="button" value="詳しく見る"></a>
 				<input class="select" type="button" value="選択する">
 			</div>
 		</div>
@@ -140,3 +140,4 @@
 
 
 	</div>
+	<input type="hidden" name="search_cond" value='<?= json_encode($searchCond, true);?>'>
