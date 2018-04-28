@@ -104,18 +104,14 @@ class ProvidersController extends AppController
 	 */
 	public function request()
 	{
-		echo '<pre>';
-		var_dump($this->request->data);exit;
-		$provider = $this->Providers->find()
-			->where(['id' => $id])
+		if (!isset($this->request->data['provider_id'])) throw new NotFoundException();
+		$ids = explode(',', $this->request->data['provider_id']);
+		$providers = $this->Providers->find()
+			->where(['id in' => $ids])
 			->all()
 			->toArray();
-		if (!isset($provider[0])) throw new NotFoundException();
-		$this->set(array(
-			'provider' => $provider[0],
-			'searchCond' => $this->request->data,
-			'id' => $id,
-		));
+		if (!isset($providers[0])) throw new NotFoundException();
+		$this->set(compact('providers'));
 	}
 
 	/**

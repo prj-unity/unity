@@ -1,4 +1,5 @@
 $(function() {
+	var request_provider_id = [];
 
 	// 検索画面から詳細画面を開く
 	// 詳細画面から検索画面に戻る
@@ -10,7 +11,49 @@ $(function() {
 		return false;
 	});
 
-	// お問い合わせ
+	// お問い合わせ(検索)
+	$(document).on('click', '.request_link_search', function() {
+		console.log(request_provider_id);
+		var ids = [];
+		for (var i in request_provider_id) ids.push(request_provider_id[i]);
+		if (ids.length) {
+			sendPost($(this).attr('href'), {
+				'provider_id': ids.join(',')
+			});
+		} else {
+			alert('企業が未選択です。');
+		}
+		return false;
+	});
+
+	// 検索画面の全て選択
+	$(document).on('click', '#selectAllButton', function() {
+		console.log($('.resultCheckBoxArea input[type="checkbox"]'));
+		$('.resultCheckBoxArea input[type="checkbox"]').each(function() {
+			$(this).prop('checked', true);
+			var id = $(this).parents('.resultBox').data('id');
+			if (request_provider_id.indexOf(id) < 0) {
+				request_provider_id.push(id);
+			}
+		});
+	});
+
+	// 検索画面のチェックボックスを選択すると、データを保持する
+	$(document).on('click', '.resultCheckBoxArea input[type="checkbox"]', function() {
+		var id = $(this).parents('.resultBox').data('id');
+		if ($(this).prop('checked')) {
+			if (request_provider_id.indexOf(id) < 0) {
+				request_provider_id.push(id);
+			}
+		} else {
+			var index = request_provider_id.indexOf(id);
+			if (index >= 0) {
+				delete request_provider_id[index];
+			}
+		}
+	});
+
+	// お問い合わせ(詳細)
 	$(document).on('click', '.request_link', function() {
 		sendPost($(this).attr('href'), {
 			'provider_id': $('input[name="id"]').val()

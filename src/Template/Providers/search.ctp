@@ -111,11 +111,13 @@
 
 		<div id="resultButtonArea">
 			<p>選択した企業に</p>
-			<input id="contactsButton" type="button" value="問い合わせる">
+			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link_search">
+				<input id="contactsButton" type="button" value="問い合わせる">
+			</a>
 			<input id="selectAllButton" type="button" value="全て選択する">
 		</div>
 <?php foreach ($providers as $provider): ?>
-		<div class="resultBox clearfix">
+		<div class="resultBox clearfix" data-id="<?=$provider['id'];?>">
 			<div>
 				<img src="/img/<?=$provider['image1'];?>">
 			</div>

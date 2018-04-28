@@ -13,9 +13,9 @@
 		
 		<h3>依頼先</h3>
 		<div id="selectCompany">
-			<div>company name<img src="../img/batsu-gray.jpg"></div>
-			<div>company name<img src="../img/batsu-gray.jpg"></div>
-			<div>company name<img src="../img/batsu-gray.jpg"></div>
+<?php foreach ($providers as $provider): ?>
+			<div data-id="<?= $provider['id'];?>"><?= $provider['username']; ?><img src="../img/batsu-gray.jpg"></div>
+<?php endforeach; ?>
 			<input type="button" form="addCompany" value="追加">
 		</div>
 		
