@@ -51,7 +51,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 			</li>
 		</ul>
 		<form id="headerSearch">
-			<input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit">
+			<input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit" value="">
 		</form>
 	</div>
 </div><!-- END header -->

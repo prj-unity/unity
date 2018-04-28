@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/* ++++++++++++++++++ common ++++++++++++++++++++ */
 a{
 text-decoration:none;
 color:#000;
@@ -16,6 +16,17 @@ color:#000;
 .button{
 	border:none;
 }
+
+
+#contentWrapper{
+	width:1200px;
+	margin:auto;
+}
+.noBorder{
+	border:none!important;
+}
+
+/* ++++++++++++++++++ header ++++++++++++++++++++ */
 
 #header{
 	width:1200px;
@@ -35,13 +46,28 @@ color:#000;
 	display:inline-block;
 	margin:10px;
 }
-#headerRight .textbox{
-	width:150px;
+#headerSearch{
+	display:flex;
+	align-items:center;
+	height:40px;
+	width:400px;
 }
-#headerRight .button{
-	width:60px;
+#headerSearch .textbox{
+	width:150px;
+	height:30px;
+}
+#headerSearch span{
+	display:inline-flex;
+	align-items:center;
+	margin:5px;
+}
+#headerSearch .button{
+	width:63px;
+	height:25px;
+	margin:5px;
 	background-image: url(../img/seartch_btn.jpg);
 	background-repeat: no-repeat;
+	background-color:#fff;
 
 }
 #headerRight span{
@@ -76,20 +102,11 @@ color:#000;
 	color:#fff;
 	height:44px;
 }
-#contentWrapper{
-	width:1200px;
-	margin:auto;
-}
-#searchTop h2{
-	text-align:center;
-	font-size:x-large;
-}
-#searchTopMain{
-	position: relative;
-	background:url(../img/unitymain.jpg);
-	width: 1200px;
-	height: 350px;
-}
+
+
+/* ++++++++++++++++++ footer ++++++++++++++++++++ */
+
+
 #footer {
 	height: 200px;
 	background-color: #206EBE;
@@ -102,6 +119,21 @@ color:#000;
 	color: #FFFFFF;
 	margin-top: 0px;
 	padding-top: 30px;
+}
+
+
+/* ++++++++++++++++++ index searchTop ++++++++++++++++++++ */
+
+
+#searchTop h2{
+	text-align:center;
+	font-size:x-large;
+}
+#searchTopMain{
+	position: relative;
+	background:url(../img/unitymain.jpg);
+	width: 1200px;
+	height: 350px;
 }
 
 
@@ -222,9 +254,6 @@ color:#000;
 #keywordserch input:focus{
 	border:none;
 	outline:0;
-}
-.noBorder{
-	border:none!important;
 }
 
 /* ++++++++++++++++++ log in ++++++++++++++++++++ */
