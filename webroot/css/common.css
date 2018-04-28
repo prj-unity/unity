@@ -26,6 +26,13 @@ color:#000;
 	border:none!important;
 }
 
+#pankuzu{
+	margin:3px 20px 10px;
+}
+#pankuzu a{
+	color:#4488ff;
+}
+
 /* ++++++++++++++++++ header ++++++++++++++++++++ */
 
 #header{
@@ -268,14 +275,8 @@ color:#000;
 }
 
 
-/* ++++++++++++++++++ result ++++++++++++++++++++ */
+/* ++++++++++++++++++ result (search.php)++++++++++++++++++++ */
 
-#pankuzu{
-	margin:3px 20px 10px;
-}
-#pankuzu a{
-	color:#4488ff;
-}
 #resultWrapper h2{
 	display:inline-block;
 	margin:15px 0;
@@ -355,6 +356,11 @@ color:#000;
 .resultBox div{
 	float:left;
 }
+.resultBox img{
+	margin:auto;
+	width:200px;
+	height:200px;
+}
 .resultBoxCenter{
 	width:550px;
 	padding:0 30px;
@@ -374,15 +380,21 @@ color:#000;
 	width:350px;
 	text-align:center;
 }
-.resultBox img{
-	margin:auto;
-	width:200px;
-	height:200px;
-}
 .resultBoxRight input{
 	width:330px;
 	height:60px;
-	margin-bottom:30px;
+	margin:20px 10px;
+}
+.resultCheckBoxArea{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:100px;
+	height:200px;
+}
+.resultCheckBoxArea input{
+	width:24px;
+	height:24px;
 }
 
 /* ++++++++++++++++++ company profile ++++++++++++++++++++ */

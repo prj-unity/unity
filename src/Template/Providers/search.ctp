@@ -129,6 +129,9 @@
 				<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'detail', $provider['id']]);?>" class="post_link"><input type="button" value="詳しく見る"></a>
 				<input class="select" type="button" value="選択する">
 			</div>
+			<div class="resultCheckBoxArea"> 
+				<input type="checkbox">
+			</div>
 		</div>
 <?php endforeach; ?>
 
