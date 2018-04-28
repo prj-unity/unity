@@ -10,6 +10,14 @@ $(function() {
 		return false;
 	});
 
+	// お問い合わせ
+	$(document).on('click', '.request_link', function() {
+		sendPost($(this).attr('href'), {
+			'provider_id': $('input[name="id"]').val()
+		});
+		return false;
+	});
+
 	/**
 	 * JavascriptでPOST送信する
 	 *

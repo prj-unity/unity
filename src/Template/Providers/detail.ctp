@@ -18,7 +18,9 @@
 			<p>商圏エリア<span>エリア</span><span>エリア</span><span>エリア</span></p>
 		</div>
 		<div class="resultBoxRight">
-			<input type="button" value="問い合わせる">
+			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link">
+				<input type="button" value="問い合わせる">
+			</a>
 			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'search']);?>" class="post_link">
 				<input type="button" value="選択して検索結果に戻る">
 			</a>
@@ -66,7 +68,9 @@
 		<img src="/image/" class="companyImage">
 	</div>
 	<div class="companyButtonArea">
-		<input type="button" class="" value="問い合わせる">
+		<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link">
+			<input type="button" value="問い合わせる">
+		</a>
 		<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'search']);?>" class="post_link">
 			<input type="button" value="選択して検索結果に戻る">
 		</a>
@@ -101,3 +105,4 @@
 		</table>
 	</div>
 	<input type="hidden" name="search_cond" value='<?= json_encode($searchCond, true);?>'>
+	<input type="hidden" name="id" value='<?= $id;?>'>

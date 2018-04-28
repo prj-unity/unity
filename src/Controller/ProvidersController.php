@@ -42,69 +42,6 @@ class ProvidersController extends AppController
 	}
 
 	/**
-	 * View method
-	 *
-	 * @param string|null $id Provider id.
-	 * @return \Cake\Network\Response|null
-	 * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-	 */
-	public function view($id = null)
-	{
-		$provider = $this->Providers->get($id, [
-			'contain' => ['ProviderMessages', 'Quotations', 'UserMessages']
-		]);
-
-		$this->set('provider', $provider);
-		$this->set('_serialize', ['provider']);
-	}
-
-	/**
-	 * Add method
-	 *
-	 * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
-	 */
-	public function add()
-	{
-		$provider = $this->Providers->newEntity();
-		if ($this->request->is('post')) {
-			$provider = $this->Providers->patchEntity($provider, $this->request->getData());
-			if ($this->Providers->save($provider)) {
-				$this->Flash->success(__('The provider has been saved.'));
-
-				return $this->redirect(['action' => 'index']);
-			}
-			$this->Flash->error(__('The provider could not be saved. Please, try again.'));
-		}
-		$this->set(compact('provider'));
-		$this->set('_serialize', ['provider']);
-	}
-
-	/**
-	 * Edit method
-	 *
-	 * @param string|null $id Provider id.
-	 * @return \Cake\Network\Response|null Redirects on successful edit, renders view otherwise.
-	 * @throws \Cake\Network\Exception\NotFoundException When record not found.
-	 */
-	public function edit($id = null)
-	{
-		$provider = $this->Providers->get($id, [
-			'contain' => []
-		]);
-		if ($this->request->is(['patch', 'post', 'put'])) {
-			$provider = $this->Providers->patchEntity($provider, $this->request->getData());
-			if ($this->Providers->save($provider)) {
-				$this->Flash->success(__('The provider has been saved.'));
-
-				return $this->redirect(['action' => 'index']);
-			}
-			$this->Flash->error(__('The provider could not be saved. Please, try again.'));
-		}
-		$this->set(compact('provider'));
-		$this->set('_serialize', ['provider']);
-	}
-
-	/**
 	 * Delete method
 	 *
 	 * @param string|null $id Provider id.
@@ -155,7 +92,30 @@ class ProvidersController extends AppController
 			->all()
 			->toArray();
 		if (!isset($provider[0])) throw new NotFoundException();
-		$this->set(array('provider' => $provider[0], 'searchCond' => $this->request->data));
+		$this->set(array(
+			'provider' => $provider[0],
+			'searchCond' => $this->request->data,
+			'id' => $id,
+		));
+	}
+
+	/**
+	 * 問い合わせ画面表示
+	 */
+	public function request()
+	{
+		echo '<pre>';
+		var_dump($this->request->data);exit;
+		$provider = $this->Providers->find()
+			->where(['id' => $id])
+			->all()
+			->toArray();
+		if (!isset($provider[0])) throw new NotFoundException();
+		$this->set(array(
+			'provider' => $provider[0],
+			'searchCond' => $this->request->data,
+			'id' => $id,
+		));
 	}
 
 	/**
