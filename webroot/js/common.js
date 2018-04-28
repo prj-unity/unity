@@ -13,7 +13,6 @@ $(function() {
 
 	// お問い合わせ(検索)
 	$(document).on('click', '.request_link_search', function() {
-		console.log(request_provider_id);
 		var ids = [];
 		for (var i in request_provider_id) ids.push(request_provider_id[i]);
 		if (ids.length) {
@@ -27,15 +26,19 @@ $(function() {
 	});
 
 	// 検索画面の全て選択
-	$(document).on('click', '#selectAllButton', function() {
-		console.log($('.resultCheckBoxArea input[type="checkbox"]'));
+	$(document).on('click', '.selectAllButton', function() {
+		var allCheck = $(this).val() == '全て選択する';
 		$('.resultCheckBoxArea input[type="checkbox"]').each(function() {
-			$(this).prop('checked', true);
+			$(this).prop('checked', allCheck);
 			var id = $(this).parents('.resultBox').data('id');
-			if (request_provider_id.indexOf(id) < 0) {
-				request_provider_id.push(id);
+			var index = request_provider_id.indexOf(id);
+			if (allCheck) {
+				if (index < 0) request_provider_id.push(id);
+			} else {
+				if (index >= 0) delete request_provider_id.push(index);
 			}
 		});
+		$('.selectAllButton').each(function() { $(this).val((allCheck) ? '全て選択解除する' : '全て選択する'); });
 	});
 
 	// 検索画面のチェックボックスを選択すると、データを保持する

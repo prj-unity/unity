@@ -109,12 +109,12 @@
 			<p>▲</p>
 		</div>
 
-		<div id="resultButtonArea">
+		<div class="resultButtonArea">
 			<p>選択した企業に</p>
 			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link_search">
-				<input id="contactsButton" type="button" value="問い合わせる">
+				<input class="contactsButton" type="button" value="問い合わせる">
 			</a>
-			<input id="selectAllButton" type="button" value="全て選択する">
+			<input class="selectAllButton" type="button" value="全て選択する">
 		</div>
 <?php foreach ($providers as $provider): ?>
 		<div class="resultBox clearfix" data-id="<?=$provider['id'];?>">
@@ -137,10 +137,12 @@
 		</div>
 <?php endforeach; ?>
 
-		<div id="resultButtonArea">
+		<div class="resultButtonArea">
 			<p>選択した企業に</p>
-			<input id="contactsButton" type="button" value="問い合わせる">
-			<input id="selectAllButton" type="button" value="全て選択する">
+			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link_search">
+				<input class="contactsButton" type="button" value="問い合わせる">
+			</a>
+			<input class="selectAllButton" type="button" value="全て選択する">
 		</div>
 
 
