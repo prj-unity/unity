@@ -6,10 +6,10 @@
 <div id="searchTop">
 	<h2>あなたの「やりたい」がきっと見つかる</h2>
 	<div id="searchTopMain">
-		<div id="item1">
+		<div id="leftItem">
 			<a href="#"><img src="img/btn_top01.png"></a>
 		</div>
-		<div id="item2">
+		<div id="rightItem">
 			<a href="#"><img src="img/btn_top02.png"></a>
 		</div>
 	</div>
@@ -29,9 +29,7 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -44,9 +42,7 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -59,9 +55,7 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -74,9 +68,7 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -89,9 +81,7 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -104,20 +94,20 @@
 					<p>ジャンル</p>
 				</div>
 			</div>
-			<div class="searchGenreBoxBottom">
-				<p>大分類名</p>
-			</div>
+			<p class="searchGenreBoxBottom">大分類名</p>
 		</div>
 	</div>
 
 	<p class="searchBigLabel">または</p>
 
+	<h3>①フリーワードで探す</h3>
+	<input type="text" name="freeword">
+
 </div>
 
 <?= $this->Form->create('name', ['name' => 'search', 'type' => 'post', 'url' => ['controller' => 'Providers', 'action' => 'search']]);?>
 <div class="searchContainer">
-	<h3>①フリーワードで探す</h3>
-	<input type="text" name="freeword">
+	
 
 	<h3>②エリアを指定する</h3>
 	<select name="region">
