@@ -338,23 +338,23 @@ color:#000;
 #refineButton p{
 	text-align:center;
 }
-#resultButtonArea{
+.resultButtonArea{
 	position:relative;
 	padding:30px;
 	padding-bottom:3px;
 	border-bottom:solid 1px #70b0f0;
 }
-#resultButtonArea p{
+.resultButtonArea p{
 	display:inline-block;
 	text-align:right;
 	width:440px;
 	padding-right:10px;
 }
-#contactsButton{
+.contactsButton{
 	width:240px;
 	height:40px;
 }
-#selectAllButton{
+.selectAllButton{
 	position:absolute;
 	right:50px;
 	font-size:small;
