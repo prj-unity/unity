@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  */
 ?>
+<!-- ＋＋＋＋検索のトップ部分を非表示にします。＋＋＋＋
 <div id="searchTop">
 	<h2>あなたの「やりたい」がきっと見つかる</h2>
 	<div id="searchTopMain">
@@ -14,9 +15,10 @@
 		</div>
 	</div>
 </div>
+	＋＋＋＋＋＋　非表示END　＋＋＋＋＋＋ -->
 
 <div class="searchContainer">
-	<h3>①ジャンルから探す</h3>
+	<h3>ジャンルから探す</h3>
 	<div class="clearfix">
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
@@ -100,15 +102,16 @@
 
 	<p class="searchBigLabel">または</p>
 
-	<h3>①フリーワードで探す</h3>
-	<input type="text" name="freeword">
+	<h3>フリーワードで探す</h3>
 
-</div>
+
 
 <?= $this->Form->create('name', ['name' => 'search', 'type' => 'post', 'url' => ['controller' => 'Providers', 'action' => 'search']]);?>
-<div class="searchContainer">
 	
-
+	<input type="text" name="freeword"><input type="submit">
+	
+<!-- ＋＋＋＋＋　エリア指定を非表示にします　＋＋＋＋＋
+<div class="searchContainer">
 	<h3>②エリアを指定する</h3>
 	<select name="region">
 		<option value="">地域</option>
@@ -129,8 +132,13 @@
 <?php endforeach; ?>
 	</select>
 </div>
+	＋＋＋＋＋＋＋　非表示END　＋＋＋＋＋＋＋ -->
 
+<!-- ＋＋＋＋＋　検索 大ボタンを非表示にします　＋＋＋＋＋
 <div id="searchButtonArea">
 	<input type="submit">
 </div>
+	＋＋＋＋＋＋＋　非表示END　＋＋＋＋＋＋＋ -->
+
 <?= $this->Form->end();?>
+</div>

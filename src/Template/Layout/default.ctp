@@ -44,7 +44,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	</div>
 	<div id="headerRight">
 		<ul>
+<!-- ＋＋＋＋＋マイページの仕様変更に伴い非表示＋＋＋＋＋
 			<li><a href="#">マイページ</a></li>
+＋＋＋＋＋非表示END＋＋＋＋＋ -->
 			<li><a href="#">Unityについて</a></li>
 			<li>
 				<?= $this->Form->create('name', ['name' => 'form', 'type' => 'post', 'url' => ['controller' => 'users', 'action' => 'logout']]);?>
@@ -52,18 +54,20 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<?= $this->Form->end();?>
 			</li>
 		</ul>
+
+<!-- ＋＋＋＋＋　ヘッダー検索非表示　＋＋＋＋＋
 		<form id="headerSearch">
 			<input class="textbox" type="text"><span>×</span><input class="textbox" type="text"><input class="button" type="submit" value="">
 		</form>
+＋＋＋＋＋非表示END＋＋＋＋＋ -->
+
 	</div>
 </div><!-- END header -->
 <div id="gMenu">
 	<ul>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
-		<li><a href="#">Menu</a></li>
+		<li><a href="#">企業検索</a></li>
+		<li><a href="#">チャット</a></li>
+		<li><a href="#">お気に入り</a></li>
 	</ul>
 </div>
 <div id="contentWrapper">
