@@ -28,6 +28,12 @@
 		<h3>回答期限</h3>
 		<div id="replyDateArea"><input type="text" id="datepicker"></div>
 		
+<!-- 天城直接導入部分 -->
+		<input type="button" value="新規依頼送信">
+		
+<!-- 直接導入END -->
+		
+		
 	</form>
 	<form id="addCompany" action="#"></form>
 	
