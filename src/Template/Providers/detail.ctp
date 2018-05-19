@@ -14,7 +14,11 @@
 		<div class="resultBoxCenter">
 			<p class="cPhrase"><?=$provider['catchphrase'];?></p>
 			<p class="cpName"><?=$provider['username'];?></p>
-			<p><?= $provider['genre']; ?></p>
+			<p>
+<?php foreach ($provider['genre_providers'] as $key => $gp): ?>
+<?php if ($key > 0): ?>, <?php endif; ?><?= $gp['genre']['genre_name']; ?>
+<?php endforeach; ?>
+			</p>
 			<p><?= $provider['region']; ?></p>
 		</div>
 		<div class="resultBoxRight">

@@ -20,10 +20,12 @@ use Cake\ORM\Entity;
  * @property string $profile1
  * @property string $profile2
  * @property string $profile3
+ * @property string $profile4
+ * @property string $example
  * @property string $image1
  * @property string $image2
  * @property string $image3
- * @property bool $deleted
+ * @property \Cake\I18n\Time $deleted
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  *

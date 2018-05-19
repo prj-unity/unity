@@ -9,6 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Providers Model
  *
+ * @property \Cake\ORM\Association\HasMany $GenreProviders
  * @property \Cake\ORM\Association\HasMany $ProviderMessages
  * @property \Cake\ORM\Association\HasMany $Quotations
  * @property \Cake\ORM\Association\HasMany $UserMessages
@@ -42,6 +43,9 @@ class ProvidersTable extends AppTable
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('GenreProviders', [
+            'foreignKey' => 'provider_id'
+        ]);
         $this->hasMany('ProviderMessages', [
             'foreignKey' => 'provider_id'
         ]);
@@ -113,6 +117,12 @@ class ProvidersTable extends AppTable
             ->allowEmpty('profile3');
 
         $validator
+            ->allowEmpty('profile4');
+
+        $validator
+            ->allowEmpty('example');
+
+        $validator
             ->allowEmpty('image1');
 
         $validator
@@ -122,9 +132,8 @@ class ProvidersTable extends AppTable
             ->allowEmpty('image3');
 
         $validator
-            ->boolean('deleted')
-            ->requirePresence('deleted', 'create')
-            ->notEmpty('deleted');
+            ->dateTime('deleted')
+            ->allowEmpty('deleted');
 
         return $validator;
     }

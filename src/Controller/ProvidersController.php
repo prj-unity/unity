@@ -74,7 +74,8 @@ class ProvidersController extends AppController
 			$datas = $this->request->data;
 			foreach ($datas as $key => $data) if ($data != '') $conditions[$key] = $data;
 		}
-		$providers = $this->Providers->find()
+		$providers = $this->Providers->find('all')
+			->contain(['GenreProviders', 'GenreProviders.Genres'])
 			->where($conditions)
 			->all()
 			->toArray();
@@ -88,6 +89,7 @@ class ProvidersController extends AppController
 	public function detail($id)
 	{
 		$provider = $this->Providers->find()
+			->contain(['GenreProviders', 'GenreProviders.Genres'])
 			->where(['id' => $id])
 			->all()
 			->toArray();

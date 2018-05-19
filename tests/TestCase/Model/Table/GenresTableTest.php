@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ProvidersTable;
+use App\Model\Table\GenresTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ProvidersTable Test Case
+ * App\Model\Table\GenresTable Test Case
  */
-class ProvidersTableTest extends TestCase
+class GenresTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\ProvidersTable
+     * @var \App\Model\Table\GenresTable
      */
-    public $Providers;
+    public $Genres;
 
     /**
      * Fixtures
@@ -24,14 +24,9 @@ class ProvidersTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.providers',
-        'app.provider_messages',
-        'app.users',
-        'app.quote_requests',
-        'app.quotations',
-        'app.quote_request_details',
-        'app.user_messages',
-        'app.messages'
+        'app.genres',
+        'app.large_genres',
+        'app.genre_providers'
     ];
 
     /**
@@ -42,8 +37,8 @@ class ProvidersTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Providers') ? [] : ['className' => 'App\Model\Table\ProvidersTable'];
-        $this->Providers = TableRegistry::get('Providers', $config);
+        $config = TableRegistry::exists('Genres') ? [] : ['className' => 'App\Model\Table\GenresTable'];
+        $this->Genres = TableRegistry::get('Genres', $config);
     }
 
     /**
@@ -53,7 +48,7 @@ class ProvidersTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Providers);
+        unset($this->Genres);
 
         parent::tearDown();
     }

@@ -126,7 +126,13 @@
 			<div class="resultBoxCenter">
 				<p class="cPhrase"><?=$provider['catchphrase'];?></p>
 				<p class="cpName"><?=$provider['username'];?></p>
-				<p>ジャンル: <span><?=$provider['genre'];?></span></p>
+				<p>ジャンル:
+					<span>
+<?php foreach ($provider['genre_providers'] as $key => $gp): ?>
+<?php if ($key > 0): ?>, <?php endif; ?><?= $gp['genre']['genre_name']; ?>
+<?php endforeach; ?>
+					</span>
+				</p>
 				<p>商圏エリア: <span><?=$provider['region'];?></span></p>
 			</div>
 			<div class="resultBoxRight">
