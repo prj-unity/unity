@@ -493,7 +493,7 @@ color:#000;
 	
 }
 #newrequestWrapper div{
-	margin-left:30px;
+	margin:20px 0px 20px 30px;
 	
 }
 #newrequestWrapper #selectCompany div{
@@ -520,9 +520,17 @@ color:#000;
 	width:100%;
 }
 
+#newrequestWrapper input[type="button"]{
+	display:block;
+	width:250px;
+	height:50px;
+	margin:20px auto;
+}
+
 #replyDateArea input{
 	width:150px;
 }
+
 
 
 /* ++++++++++++++++++ contact list ++++++++++++++++++++ */
