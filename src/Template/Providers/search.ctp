@@ -108,7 +108,7 @@
 			</div>
 		</div>
 		<div id="refineButton">
-			<p>▲</p>
+			<p>▼</p>
 		</div>
 
 		<div class="resultButtonArea">

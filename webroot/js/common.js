@@ -4,7 +4,9 @@ $(function() {
 	// 検索画面の絞り込みをデフォルトで閉じておく
 	$(document).on('click', '#refineButton', function() {
 		console.log('click');
-		$('.refineToggle').slideToggle();
+		$('.refineToggle').slideToggle(function() {
+			$('#refineButton').find('p').text(($(this).css('display') != 'none') ? '▲' : '▼');
+		});
 	});
 
 	// 検索画面から詳細画面を開く
