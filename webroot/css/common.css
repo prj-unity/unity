@@ -523,3 +523,64 @@ color:#000;
 #replyDateArea input{
 	width:150px;
 }
+
+
+/* ++++++++++++++++++ contact list ++++++++++++++++++++ */
+
+#contactListWrapper table{
+	font-size:large;
+	margin:20px auto;
+}
+#contactListWrapper tr{
+	border:1px solid #555;
+}
+
+#contactListWrapper th,#contactListWrapper td{
+	padding:2px 5px;
+}
+#contactListWrapper .contactListTitle{
+	width:600px;
+}
+#contactListWrapper .contactListName{
+	width:200px;
+}
+#contactListWrapper .contactListStatus{
+	width:100px;
+}
+#contactListWrapper .contactListDate{
+	width:auto;
+}
+#contactListWrapper .tableButton{
+	background:linear-gradient(#f8f8f8, #d0d0d0);
+	border:1px solid #d8d8d8;
+}
+#contactListWrapper .tableButton:hover{
+	background:linear-gradient(#fff, #e8e8e8);
+	border:1px solid #d8d8d8;
+}
+
+
+/* ++++++++++++++++++ chat ++++++++++++++++++++ */
+
+#chatTitle p{
+	padding:10px 50px;
+	font-size:x-large;
+}
+#chatArea{
+	overflow-y:scroll;
+	width:1100px;
+	height:800px;
+}
+
+#chatSendArea{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+#chatSendArea textarea{
+	width:800px;
+	height:50px;
+}
+#chatSendArea input{
+	
+}
