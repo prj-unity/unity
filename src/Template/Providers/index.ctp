@@ -20,84 +20,21 @@
 <div class="searchContainer">
 	<h3>ジャンルから探す</h3>
 	<div class="clearfix">
+<?php $cnt = 0; ?>
+<?php foreach ($largeGenres as $largeGenre): ?>
 		<div class="searchGenreBox">
 			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre01.jpg">
+				<img src="img/pic_genre0<?= $cnt % 6 + 1; ?>.jpg">
 				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
+<?php foreach ($largeGenre['genres'] as $genre): ?>
+					<p><?= $genre['genre_name']; ?></p>
+<?php endforeach; ?>
 				</div>
 			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
+			<p class="searchGenreBoxBottom"><?= $largeGenre['large_genre_name']; ?></p>
 		</div>
-		<div class="searchGenreBox">
-			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre02.jpg">
-				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-				</div>
-			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
-		</div>
-		<div class="searchGenreBox">
-			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre03.jpg">
-				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-				</div>
-			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
-		</div>
-		<div class="searchGenreBox">
-			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre04.jpg">
-				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-				</div>
-			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
-		</div>
-		<div class="searchGenreBox">
-			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre05.jpg">
-				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-				</div>
-			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
-		</div>
-		<div class="searchGenreBox">
-			<div class="searchGenreBoxTop">
-				<img src="img/pic_genre06.jpg">
-				<div>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-					<p>ジャンル</p>
-				</div>
-			</div>
-			<p class="searchGenreBoxBottom">大分類名</p>
-		</div>
+<?php $cnt++;?>
+<?php endforeach; ?>
 	</div>
 
 	<p class="searchBigLabel">または</p>

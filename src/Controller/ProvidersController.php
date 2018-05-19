@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Providers Controller
@@ -10,7 +11,6 @@ use App\Controller\AppController;
  */
 class ProvidersController extends AppController
 {
-
 	/**
 	 * Index method
 	 *
@@ -37,8 +37,14 @@ class ProvidersController extends AppController
 				}
 			}
 		}
+		$largeGenres = TableRegistry::get("large_genres")->find()
+			->contain(['Genres' => function($query) {
+				return $query->select(['id', 'large_genre_id', 'genre_name']);
+			}])
+			->select(['id', 'large_genre_name'])
+			->all()->toArray();
 
-		$this->set(compact('datas'));
+		$this->set(compact('datas', 'largeGenres'));
 	}
 
 	/**
