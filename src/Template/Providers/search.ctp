@@ -14,96 +14,98 @@
 		<p id="resultLabel"><?=count($providers);?>件</p>
 		<div id="resultRefineContainer">
 			<p id="refineTitle">▼絞り込み検索</p>
-			<h3>駅で絞り込む</h3>
-			<div class="refineBox">
-				<div class="refineLine">
-					<span class="refineLineTitle">あ｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
+			<div class="refineToggle" style="display: none">
+				<h3>駅で絞り込む</h3>
+				<div class="refineBox">
+					<div class="refineLine">
+						<span class="refineLineTitle">あ｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">か｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">さ｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">た｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">な｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
 				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">か｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
+				<div class="refineBox">
+					<div class="refineLine">
+						<span class="refineLineTitle">は｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">ま｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">や｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">ら｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
+					<div class="refineLine">
+						<span class="refineLineTitle">わ｜</span>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+						<a href="/result.html"><span>駅名</span></a>
+					</div>
 				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">さ｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">た｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">な｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
+				<h3>フリーワードで絞り込む</h3>
+				<form action="/result.html">
+					<input type="text">
+					<input type="submit">
+				</form>
 			</div>
-			<div class="refineBox">
-				<div class="refineLine">
-					<span class="refineLineTitle">は｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">ま｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">や｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">ら｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-				<div class="refineLine">
-					<span class="refineLineTitle">わ｜</span>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-					<a href="/result.html"><span>駅名</span></a>
-				</div>
-			</div>
-			<h3>フリーワードで絞り込む</h3>
-			<form action="/result.html">
-				<input type="text">
-				<input type="submit">
-			</form>
 		</div>
 		<div id="refineButton">
 			<p>▲</p>
@@ -119,7 +121,7 @@
 <?php foreach ($providers as $provider): ?>
 		<div class="resultBox clearfix" data-id="<?=$provider['id'];?>">
 			<div>
-				<img src="/img/<?=$provider['image1'];?>">
+				<img src="<?= $this->Url->image('company/' . $provider['image1']); ?>">
 			</div>
 			<div class="resultBoxCenter">
 				<p class="cPhrase"><?=$provider['catchphrase'];?></p>

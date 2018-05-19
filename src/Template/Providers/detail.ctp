@@ -9,13 +9,13 @@
 	<a href="#"><?=$provider['username'];?></a>
 	<div class="resultBox companyBox noBorder clearfix">
 		<div>
-			<img src="img/company001.jpg">
+			<img src="<?= $this->Url->image('company/' . $provider['image1']); ?>">
 		</div>
 		<div class="resultBoxCenter">
 			<p class="cPhrase"><?=$provider['catchphrase'];?></p>
 			<p class="cpName"><?=$provider['username'];?></p>
-			<p>ジャンル<span>小ジャンル</span><span>小ジャンル</span><span>小ジャンル</span></p>
-			<p>商圏エリア<span>エリア</span><span>エリア</span><span>エリア</span></p>
+			<p><?= $provider['genre']; ?></p>
+			<p><?= $provider['region']; ?></p>
 		</div>
 		<div class="resultBoxRight">
 			<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link">
@@ -29,7 +29,7 @@
 	<div class="companyContainer clearfix">
 		<h2>プロフィール</h2>
 		<p class="companyText"><?=$provider['profile1'];?></p>
-		<img src="/image/" class="companyImage">
+		<img src="<?= $this->Url->image('company/' . $provider['image2']); ?>" class="companyImage">
 	</div>
 	<div class="companyContainer clearfix">
 		<h2>弊社の強み</h2>
@@ -65,7 +65,7 @@
 	<div class="companyContainer clearfix">
 		<h2>事例紹介</h2>
 		<p class="companyText"><?= nl2br(h($provider['example']));?></p>
-		<img src="/image/" class="companyImage">
+		<img src="<?= $this->Url->image('company/' . $provider['image3']); ?>" class="companyImage">
 	</div>
 	<div class="companyButtonArea">
 		<a href="<?= $this->Url->build(['controller' => 'Providers', 'action' => 'request']);?>" class="request_link">

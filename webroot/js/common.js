@@ -1,6 +1,12 @@
 $(function() {
 	var request_provider_id = [];
 
+	// 検索画面の絞り込みをデフォルトで閉じておく
+	$(document).on('click', '#refineButton', function() {
+		console.log('click');
+		$('.refineToggle').slideToggle();
+	});
+
 	// 検索画面から詳細画面を開く
 	// 詳細画面から検索画面に戻る
 	$(document).on('click', '.post_link', function() {
