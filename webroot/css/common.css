@@ -593,13 +593,25 @@ color:#000;
 	float:left;
 	width:300px;
 }
+#chatlistWrapper > div{
+	overflow-y:scroll;
+}
+#chatlistWrapper div div{
+	border:solid 2px #bfe0ff;
+	margin-bottom:-2px;
+	background-color:#f0f8ff;
+}
+#chatlistWrapper div div:last-child{
+	margin-bottom:0;
+}
+
 #chatWrapper{
 	float:left;
 	width:900px;
 }
 #chatTitle{
 	padding:10px 0;
-	background-color:#bbeaff;
+	background-color:#dff0ff;
 }
 #chatTitle p{
 	margin:10px 50px;
@@ -608,7 +620,7 @@ color:#000;
 #chatArea{
 	overflow-y:scroll;
 	height:450px;
-	background-color:#ddf4ff;
+	background-color:#eff8ff;
 }
 #chatArea > div{
 	border:solid 1px #a8a8a8;
@@ -616,9 +628,14 @@ color:#000;
 }
 #chatArea div.self{
 	margin:30px 0px 30px auto;
+	background-color:#eee;
 }
 #chatArea div.partner{
 	margin:30px auto 30px 0;
+	background-color:#fff;
+}
+#chatArea p{
+	margin:7px;
 }
 #chatArea .sendTime{
 	border-bottom:solid 1px #dedede;
@@ -627,19 +644,32 @@ color:#000;
 	color:#0000ff;
 }
 #chatArea .attachment{
+	display:inline-block;
 	border:solid 1px #dedede;
+	padding:5px;
+	margin:10px;
 }
-
 #chatSendArea{
+	padding:1px 0 10px;
+	background-color:#dff0ff;
+}
+#chatSendArea p{
+	margin-top:10px;
+}
+#chatSendArea div{
 	display:flex;
 	align-items:center;
 	justify-content:center;
 }
 #chatSendArea textarea{
-	width:800px;
+	width:820px;
 	height:50px;
 }
-#chatSendArea input[type="button"]{
-	width:100px;
+#chatSendArea div input[type="button"]{
+	width:80px;
+	height:35px;
+}
+#chatSendArea p input[type="button"]{
+	width:130px;
 	height:35px;
 }
